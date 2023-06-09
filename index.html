@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="row">
+          <div class="col-2">
+            <i class="fa-regular fa-sun sun-icon"></i>
+          </div>
+          <div class="col-4">
+            <h1>
+              <span class="temperature" id="temperature"> 20 </span>
+              <span class="units">
+                <a href="#" id="celsius-link"> °C </a>
+                |
+                <a href="#" id="fahrenheit-link"> °F </a>
+              </span>
+            </h1>
+            <h3>Feels like 20°C</h3>
+            <h6 id="description">Clear Sky</h6>
+          </div>
+          <div class="col-6">
+            <h2 id="city">Rotterdam</h2>
+            <h4>Friday, 13 June</h4>
+            <h5>Current time 00:00</h5>
+          </div>
+        </div>
+        <div class="row">
+          <form id="search-form" class="row g-3">
+            <div class="col-2">
+              <input
+                type="text"
+                readonly
+                class="form-control-plaintext"
+                id="staticEmail2"
+                value="City"
+              />
+            </div>
+            <div class="search-form col-6">
+              <input
+                type="text"
+                class="form-control"
+                id="city-input"
+                placeholder="Search"
+              />
+            </div>
+            <div class="col-2">
+              <button type="submit" class="btn btn-secondary mb-3">
+                Search
+              </button>
+            </div>
+            <div class="col-2">
+              <button type="click" class="btn btn-secondary mb-3" id="location">
+                Location
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="row prediction">
+          <div class="col-sm day one">
+            Day 1
+            <br />
+            <i class="fa-solid fa-cloud-sun"></i>
+          </div>
+          <div class="col-sm day two">
+            Day 2
+            <br />
+            <i class="fa-solid fa-cloud-rain"></i>
+          </div>
+          <div class="col-sm day three">
+            Day 3
+            <br />
+            <i class="fa-solid fa-cloud-showers-heavy"></i>
+          </div>
+          <div class="col-sm day four">
+            Day 4
+            <br />
+            <i class="fa-solid fa-cloud-sun-rain"></i>
+          </div>
+          <div class="col-sm day five">
+            Day 5
+            <br />
+            <i class="fa-solid fa-cloud-meatball"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

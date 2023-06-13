@@ -1,13 +1,13 @@
 body {
+  background-color: #e8f9fd;
+  padding-bottom: 250px;
+}
+.container {
   background: linear-gradient(
     359.3deg,
     rgb(196, 214, 252) 1%,
     rgba(187, 187, 187, 0) 70.9%
   );
-  padding-bottom: 250px;
-}
-.container {
-  background-color: #e8f9fd;
   border: #3667a6;
   border-radius: 3px;
   border-style: solid;

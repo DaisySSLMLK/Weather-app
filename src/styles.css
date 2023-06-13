@@ -31,7 +31,7 @@ i {
 }
 h1,
 h3,
-h6 {
+h5 {
   text-align: left;
 }
 h3 {
@@ -40,7 +40,7 @@ h3 {
 }
 h2,
 h4,
-h5 {
+h6 {
   text-align: right;
 }
 a {

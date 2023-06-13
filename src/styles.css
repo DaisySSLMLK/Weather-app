@@ -1,12 +1,87 @@
 body {
-  background-color: #e8f9fd;
+  background-image: url("../media/midnight.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-bottom: 250px;
 }
+.morning {
+  background-image: url("../media/morning.jpg");
+}
+.morning h1 {
+  color: black;
+}
+.morning h2 {
+  color: rgb(15, 15, 15);
+}
+.morning h3 {
+  color: rgb(125, 125, 125);
+}
+.morning h4 {
+  color: rgb(100, 100, 100);
+}
+.morning h5 {
+  color: rgb(210, 210, 210);
+}
+.morning h6 {
+  color: rgb(150, 150, 150);
+}
+.morning a {
+  color: rgb(50, 50, 50);
+}
+.afternoon {
+  background-image: url("../media/afternoon.jpg");
+}
+.afternoon h1 {
+  color: black;
+}
+.afternoon h2 {
+  color: rgb(15, 15, 15);
+}
+.afternoon h3 {
+  color: rgb(125, 125, 125);
+}
+.afternoon h4 {
+  color: rgb(100, 100, 100);
+}
+.afternoon h5 {
+  color: rgb(210, 210, 210);
+}
+.afternoon h6 {
+  color: rgb(150, 150, 150);
+}
+.afternoon a {
+  color: rgb(50, 50, 50);
+}
+.evening {
+  background-image: url("../media/sunset.jpg");
+}
+.evening h1 {
+  color: black;
+}
+.evening h2 {
+  color: rgb(15, 15, 15);
+}
+.evening h3 {
+  color: rgb(125, 125, 125);
+}
+.evening h4 {
+  color: rgb(100, 100, 100);
+}
+.evening h5 {
+  color: rgb(210, 210, 210);
+}
+.evening h6 {
+  color: rgb(150, 150, 150);
+}
+.evening a {
+  color: rgb(50, 50, 50);
+}
+
 .container {
   background: linear-gradient(
     359.3deg,
     rgb(196, 214, 252) 1%,
-    rgba(187, 187, 187, 0) 70.9%
+    rgba(187, 187, 187, 0.3) 70.9%
   );
   border: #3667a6;
   border-radius: 3px;
@@ -34,8 +109,11 @@ h3,
 h5 {
   text-align: left;
 }
+h1 {
+  color: rgb(210, 210, 210);
+}
 h3 {
-  color: rgb(200, 200, 200);
+  color: rgb(50, 50, 50);
   font-size: 16px;
 }
 h2,
@@ -44,18 +122,17 @@ h6 {
   text-align: right;
 }
 a {
-  color: rgb(50, 50, 50);
+  color: rgb(150, 150, 150);
 }
 h2 {
+  color: rgb(200, 200, 200);
   font-size: 44px;
   font-weight: 400;
 }
 h4 {
-  color: rgb(100, 100, 100);
   font-weight: 400;
 }
 h5 {
-  color: rgb(210, 210, 210);
   font-size: 10px;
 }
 h6 {

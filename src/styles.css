@@ -97,10 +97,12 @@ i {
   font-size: 35px;
   padding: 30px;
 }
-.main-icon {
+.sun-icon {
+  color: #ffed00;
+  font-size: 80px;
+  font-weight: 400;
   padding: 0;
   text-align: left;
-  width: 30px;
 }
 h1,
 h3,
@@ -134,7 +136,7 @@ h5 {
   font-size: 10px;
 }
 h6 {
-  color: rgb(150, 150, 150);
+  color: rgb(100, 100, 100);
   font-size: 13px;
 }
 form {
@@ -157,4 +159,11 @@ footer {
   font-size: 10px;
   margin: 0 auto;
   text-align: center;
+}
+.active {
+  color: rgb(150, 150, 150);
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
 }

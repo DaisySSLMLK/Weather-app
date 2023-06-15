@@ -124,6 +124,10 @@ h6 {
 a {
   color: rgb(150, 150, 150);
 }
+a:hover {
+  color: rgb(125, 125, 125);
+  text-decoration: none;
+}
 h2 {
   color: rgb(200, 200, 200);
   font-size: 44px;

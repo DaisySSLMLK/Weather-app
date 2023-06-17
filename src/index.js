@@ -43,6 +43,7 @@ let h5 = document.querySelector("h5");
 h5.innerHTML = fullTime;
 
 function displayWeatherCondition(response) {
+  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.temperature.current
@@ -50,14 +51,11 @@ function displayWeatherCondition(response) {
   document.querySelector("#description").innerHTML =
     response.data.condition.description;
 
-  let celsiusTemperature = response.data.main.temp;
+  let celsiusTemperature = response.data.temperature.current;
 
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  iconElement.setAttribute("src", response.data.condition.icon_url);
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
 function searchCity(city) {

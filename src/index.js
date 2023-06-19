@@ -51,7 +51,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#description").innerHTML =
     response.data.condition.description;
 
-  let celsiusTemperature = response.data.temperature.current;
+  celsiusTemperature = response.data.temperature.current;
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", response.data.condition.icon_url);
@@ -100,7 +100,7 @@ function convertToCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-celsiusTemperature = response.data.temperature.current;
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);

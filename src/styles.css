@@ -143,6 +143,9 @@ h6 {
   color: rgb(100, 100, 100);
   font-size: 13px;
 }
+p {
+  font-size: 13px;
+}
 form {
   font-size: 20px;
   padding: 60px;

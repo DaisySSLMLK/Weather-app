@@ -115,6 +115,10 @@ function searchCity(city) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
+function displayCountry(response) {
+  document.querySelector("#country").innerHTML = response.data.country;
+}
+
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -150,6 +154,14 @@ function convertToCelsius(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+function changeTheme() {
+  let body = document.querySelector("body");
+  body.classList.toggle("day");
+}
+
+let themeButton = document.querySelector(".theme-button");
+themeButton.addEventListener("click", changeTheme);
 
 let celsiusTemperature = null;
 

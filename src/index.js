@@ -63,18 +63,16 @@ function displayForecast(response) {
         `
       <div class="col-sm">
             <div class+"weather-forecast-date">${formatDay(
-              forecastDay.dt
+              forecastDay.time
             )}</div>
-            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
-              forecastDay.weather[0].icon
-            }.png" alt="" width="42" />
+            <img src="${forecastDay.condition.icon_url}" alt="" width="42" />
             <div class="weather-forecast-temperature">
-            <span class<span class="weather-forecast-temperature-max"> ${Math.round(
-              forecastDay.temp.max
-            )}° </span>
+            <span class="weather-forecast-temperature-max"> ${Math.round(
+              forecastDay.temperature.maximum
+            )}°C </span>
           <span class="weather-forecast-temperature-min"> ${Math.round(
-            forecastDay.temp.min
-          )}° </span>
+            forecastDay.temperature.minimum
+          )}°C </span>
           </div>
           </div>
       `;
@@ -83,6 +81,12 @@ function displayForecast(response) {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "ee3144oaa7a2470c5e3fb0t31f3f3d04";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayWeatherCondition(response) {
@@ -99,6 +103,8 @@ function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", response.data.condition.icon_url);
   iconElement.setAttribute("alt", response.data.condition.description);
+
+  getForecast(response.data.coordinates);
 }
 
 function searchCity(city) {

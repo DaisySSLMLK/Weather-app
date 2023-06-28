@@ -94,6 +94,7 @@ function getForecast(coordinates) {
 function displayWeatherCondition(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.city;
+  document.querySelector("#country").innerHTML = response.data.country;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.temperature.current
   );
@@ -113,10 +114,6 @@ function searchCity(city) {
   let apiKey = "ee3144oaa7a2470c5e3fb0t31f3f3d04";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
-}
-
-function displayCountry(response) {
-  document.querySelector("#country").innerHTML = response.data.country;
 }
 
 function handleSubmit(event) {
